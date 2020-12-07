@@ -7,8 +7,9 @@
 		"clean": "shx rm -rf dist && shx mkdir dist",
 		"copy:static": "shx cp -r src/manifest.json src/assets dist",
 		"build:background": "parcel build src/background/index.ts -d dist/background",
+		"build:popup": "parcel build src/popup/index.html -d dist/popup --public-url ./",
 		"prebuild": "npm run clean",
-		"build": "npm run build:background",
+		"build": "npm run build:background && npm run build:popup",
 		"postbuild": "npm run copy:static"
 	},
 	"keywords": [],
@@ -16,8 +17,16 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@types/chrome": "0.0.126",
+		"@types/react": "^17.0.0",
+		"@types/react-dom": "^17.0.0",
+		"@types/styled-components": "^5.1.4",
 		"parcel-bundler": "^1.12.4",
 		"shx": "^0.3.3",
 		"typescript": "^4.1.2"
+	},
+	"dependencies": {
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"styled-components": "^5.2.1"
 	}
 }

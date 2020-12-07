@@ -3,6 +3,11 @@
 	"version": "1.0",
 	"description": "Mimics the functionality of the DuckDuckGo !Bangs, but for chrome.",
 	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "assets/icons/icon-16.png",
+		"default_popup": "popup/index.html",
+		"default_title": "DuckDuckGo !Bangs - Chrome"
+	},
 	"background": {
 		"scripts": ["background/index.js"],
 		"persistent": false
