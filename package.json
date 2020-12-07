@@ -1,23 +1,23 @@
 {
-  "name": "duckduckgo-bangs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-	"clean": "shx rm -rf dist && shx mkdir dist",
-	"copy:static": "shx cp -r src/manifest.json src/assets dist",
-	"build:background": "parcel build src/background/index.ts -d dist/background",
-	"prebuild": "npm run clean",
-	"build": "npm run build:background",
-	"postbuild":  "npm run copy:static"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/chrome": "0.0.126",
-    "parcel-bundler": "^1.12.4",
-    "shx": "^0.3.3",
-    "typescript": "^4.1.2"
-  }
+	"name": "duckduckgo-bangs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"clean": "shx rm -rf dist && shx mkdir dist",
+		"copy:static": "shx cp -r src/manifest.json src/assets dist",
+		"build:background": "parcel build src/background/index.ts -d dist/background",
+		"prebuild": "npm run clean",
+		"build": "npm run build:background",
+		"postbuild": "npm run copy:static"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/chrome": "0.0.126",
+		"parcel-bundler": "^1.12.4",
+		"shx": "^0.3.3",
+		"typescript": "^4.1.2"
+	}
 }

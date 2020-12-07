@@ -1,11 +1,16 @@
 {
-    "name": "DuckDuckGo Bangs",
-    "version": "1.0",
-    "description": "Mimics the functionality of the DuckDuckGo !Bangs, but for chrome.",
+	"name": "DuckDuckGo !Bangs - Chrome",
+	"version": "1.0",
+	"description": "Mimics the functionality of the DuckDuckGo !Bangs, but for chrome.",
 	"manifest_version": 2,
 	"background": {
 		"scripts": ["background/index.js"],
 		"persistent": false
 	},
-	"omnibox": { "keyword" : "!" }
-  }
+	"omnibox": { "keyword": "!" },
+	"icons": {
+		"16": "assets/icons/icon-16.png",
+		"48": "assets/icons/icon-48.png",
+		"128": "assets/icons/icon-128.png"
+	}
+}
