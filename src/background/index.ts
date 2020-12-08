@@ -1,6 +1,4 @@
-import UrlBuilder from './UrlBuilder';
-
-const urlBuilder = new UrlBuilder();
+import { urlBuilder } from '../shared/UrlBuilder';
 
 chrome.omnibox.onInputChanged.addListener((text, suggest) => {
 	suggest(urlBuilder.getSuggestions(text));

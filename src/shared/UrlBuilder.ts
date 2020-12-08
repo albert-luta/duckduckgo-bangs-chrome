@@ -38,4 +38,4 @@ class UrlBuilder {
 	}
 }
 
-export default UrlBuilder;
+export const urlBuilder = new UrlBuilder();

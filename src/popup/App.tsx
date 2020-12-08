@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { memo } from 'react';
+import { RecoilRoot } from 'recoil';
+import { GlobalStylesProvider } from './components/GlobalStyles';
+import { StateInitializer } from './components/StateInitializer';
+import { TabsButtons } from './components/TabsButtons';
+import { TabsContent } from './components/TabsContent';
+import { TopContainerCss } from './shared/styles.css';
 
-const App = () => {
-	return <div>it's working</div>;
-};
+export const App = memo(function App() {
+	return (
+		<RecoilRoot>
+			<StateInitializer />
 
-export default App;
+			<GlobalStylesProvider>
+				<TopContainerCss>
+					<TabsContent />
+					<TabsButtons />
+				</TopContainerCss>
+			</GlobalStylesProvider>
+		</RecoilRoot>
+	);
+});
